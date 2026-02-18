@@ -18,6 +18,8 @@ Programmatic usage of pi-coding-agent via `createAgentSession()`.
 | `10-settings.ts` | Override compaction, retry, terminal settings |
 | `11-sessions.ts` | In-memory, persistent, continue, list sessions |
 | `12-full-control.ts` | Replace everything, no discovery |
+| `13-openai-image-and-weather.ts` | OpenAI `gpt-5.2-codex` with image input + NYC two-week weather web search |
+| `14-opus45-image-and-weather.ts` | Anthropic `claude-opus-4-5` with image input + NYC two-week weather web search |
 
 ## Running
 
@@ -114,6 +116,7 @@ await session.prompt("Hello");
 | `agentDir` | `~/.pi/agent` | Config directory |
 | `model` | From settings/first available | Model to use |
 | `thinkingLevel` | From settings/"off" | off, low, medium, high |
+| `nativeTools` | `undefined` | Provider-native tools (for example `{ webSearch: true }`) |
 | `tools` | `codingTools` | Built-in tools |
 | `customTools` | `[]` | Additional tool definitions |
 | `resourceLoader` | DefaultResourceLoader | Resource loader for extensions, skills, prompts, themes |
