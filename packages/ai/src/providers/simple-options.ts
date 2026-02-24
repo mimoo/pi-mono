@@ -6,12 +6,15 @@ export function buildBaseOptions(model: Model<Api>, options?: SimpleStreamOption
 		maxTokens: options?.maxTokens || Math.min(model.maxTokens, 32000),
 		signal: options?.signal,
 		apiKey: apiKey || options?.apiKey,
+		transport: options?.transport,
+		previousResponseId: options?.previousResponseId,
 		cacheRetention: options?.cacheRetention,
 		sessionId: options?.sessionId,
 		headers: options?.headers,
 		onPayload: options?.onPayload,
 		maxRetryDelayMs: options?.maxRetryDelayMs,
 		metadata: options?.metadata,
+		nativeTools: options?.nativeTools,
 	};
 }
 
